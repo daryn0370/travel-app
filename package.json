@@ -2,13 +2,15 @@
   "name": "travel-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://daryn0370.github.io/travel-app",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-    
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
@@ -36,11 +38,8 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  
   }
-  
-  
 }
-

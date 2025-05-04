@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/travel-app/',
   server: {
     proxy: {
       // все запросы к /api/* будут проксироваться на http://localhost:5000/*
