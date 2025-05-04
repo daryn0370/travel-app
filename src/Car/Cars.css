@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.car-wrapper {
+  padding: 2rem;
+  background: linear-gradient(to right, #f5f7fa, #e4ecf5);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.car-back-btn {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.car-back-btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+.car-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.car-sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+  flex-shrink: 0;
+}
+
+.car-sidebar h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.car-sidebar label {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.car-sidebar input,
+.car-sidebar select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.car-sidebar input {
+  width: 255px;
+}
+
+.car-sidebar input:focus,
+.car-sidebar select:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  flex: 1;
+}
+
+.car-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.car-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.car-info h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #212121;
+}
+
+.car-info p {
+  margin: 0;
+  color: #757575;
+  font-size: 0.95rem;
+}
+
+.car-select-btn {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+}
+
+.car-select-btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+.car-select-btn:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}

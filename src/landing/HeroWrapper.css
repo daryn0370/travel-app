@@ -1,0 +1,24 @@
+.hero-wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/italy.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(12, 115, 254, 0.85); 
+    z-index: -1;
+  }
+  

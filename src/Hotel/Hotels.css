@@ -1,0 +1,228 @@
+@font-face {
+  font-family: Stapel-Light;
+  src: url(../fonts/Stapel-Light.ttf);
+}
+
+@font-face {
+  font-family: Stapel-Medium;
+  src: url(../fonts/Stapel-Medium.ttf);
+}
+
+@font-face {
+  font-family: Stapel-Bold;
+  src: url(../fonts/Stapel-Bold.ttf);
+}
+
+
+
+
+.hotels-page {
+    display: flex;
+    padding: 2rem;
+    font-family: "Arial", sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
+    height: fit-content;
+    box-sizing: border-box; /* это ключевой момент! */
+    margin-top: 20px;
+  }
+  
+  
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: Stapel-Light;
+  }
+  
+  .sidebar label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  .sidebar input,
+  .sidebar select {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* добавь это! */
+  }
+  
+  
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    /* flex: 1; */
+    margin-right: 10px;
+
+  }
+  
+  .hotel-card {
+    width: 315px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hotel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+  
+  .hotel-info {
+    padding: 1rem;
+  }
+  
+  .hotel-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .hotel-info p {
+    margin: 0.2rem 0;
+    color: #555;
+  }
+  
+
+
+  .hotels {
+    padding: 2rem;
+    background-color: #f7f9fb;
+    min-height: 100vh;
+  }
+  
+  .hotels-title {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .hotel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .hotel-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  .hotel-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #222;
+  }
+  
+  .hotel-card p {
+    margin: 0 0 1rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .hotel-price {
+    font-weight: bold;
+    color: #0077ff;
+    font-size: 1.1rem;
+  }
+
+  
+
+
+
+  .hotels-page {
+    padding: 1rem;
+  }
+  
+  .back-button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 30px;
+  }
+  
+  .back-button:hover {
+    background-color: #005fcc;
+  }
+  
+  .hotels-content {
+    display: flex;
+    gap: 1rem;
+  }
+
+
+  .hotels-wrapper {
+    padding: 2rem;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .hotels-page {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  
+
+
+  .hotel-info-row {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .select-button {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    margin-left: 15px;
+  }
+  
+  .select-button:hover {
+    background-color: #005fcc;
+  }
+  
