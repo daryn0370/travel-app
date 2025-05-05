@@ -3,12 +3,33 @@ import axios from "axios";
 import "./Avia.css";
 import { useSearchParams } from "react-router-dom";
 
+// Импортируем все 8 изображений левой и правой колонок
+import left1 from "../images/left-1.jpg";
+import left2 from "../images/left-2.jpg";
+import left3 from "../images/left-3.jpg";
+import left4 from "../images/left-4.jpg";
+import left5 from "../images/left-5.jpg";
+import left6 from "../images/left-6.jpg";
+import left7 from "../images/left-7.jpg";
+import left8 from "../images/left-8.jpg";
+
+import right1 from "../images/right-1.jpg";
+import right2 from "../images/right-2.jpg";
+import right3 from "../images/right-3.jpg";
+import right4 from "../images/right-4.jpg";
+import right5 from "../images/right-5.jpg";
+import right6 from "../images/right-6.jpg";
+import right7 from "../images/right-7.jpg";
+import right8 from "../images/right-8.jpg";
+
 export default function Avia() {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [addingId, setAddingId] = useState(null);
-
   const [searchParams] = useSearchParams();
+
+  const leftImages = [left1, left2, left3, left4, left5, left6, left7, left8];
+  const rightImages = [right1, right2, right3, right4, right5, right6, right7, right8];
 
   const formatDate = (dateString) => {
     if (!dateString) return "";
@@ -76,8 +97,8 @@ export default function Avia() {
     <div className="avia-layout">
       {/* Левая колонка с фото */}
       <div className="avia-side">
-        {[...Array(8)].map((_, i) => (
-          <img key={i} src={`/src/images/left-${i + 1}.jpg`} alt={`left-${i + 1}`} />
+        {leftImages.map((src, i) => (
+          <img key={i} src={src} alt={`left-${i + 1}`} />
         ))}
       </div>
 
@@ -131,8 +152,8 @@ export default function Avia() {
 
       {/* Правая колонка с фото */}
       <div className="avia-side">
-        {[...Array(8)].map((_, i) => (
-          <img key={i} src={`/src/images/right-${i + 1}.jpg`} alt={`right-${i + 1}`} />
+        {rightImages.map((src, i) => (
+          <img key={i} src={src} alt={`right-${i + 1}`} />
         ))}
       </div>
     </div>
