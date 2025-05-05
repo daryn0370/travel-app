@@ -370,36 +370,24 @@ app.delete('/api/user/cars/:id', authMiddleware, async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server listening on http://localhost:${PORT}`);
+// server.js, после всех других app.post/... вставьте:
+app.post('/api/payment', authMiddleware, async (req, res) => {
+  try {
+    // Здесь вы могли бы интегрироваться с платежным шлюзом
+    // или просто эмулировать успех:
+    console.log(`User ${req.user.id} initiated payment for order`);
+
+    // …например, сохранить какую‑то запись payment в БД…
+
+    // Ответ клиенту об успешной оплате
+    return res.json({ message: 'Оплата прошла успешно' });
+  } catch (err) {
+    console.error('Payment error:', err);
+    return res.status(500).json({ error: 'Ошибка при обработке оплаты' });
+  }
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.listen(PORT, () => {
+  console.log(`🚀 Server listening on http://localhost:${PORT}`);
+});
