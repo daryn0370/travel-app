@@ -182,6 +182,24 @@ app.post('/api/logout', (req, res) => {
 
 // Сохранение билета
 
+// Получение сохранённых билетов пользователя
+app.get('/api/user/tickets', authMiddleware, async (req, res) => {
+  try {
+    const result = await client.query(
+      `SELECT t.*
+         FROM avia_tickets t
+    INNER JOIN user_tickets ut ON ut.ticket_id = t.ticket_id
+        WHERE ut.user_id = $1`,
+      [req.user.id]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Ошибка получения билетов пользователя:', err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
 // Получение сохранённых билетов
 app.get('/api/avia-tickets', async (req, res) => {
   const { from, where_to, when, when_back } = req.query;
